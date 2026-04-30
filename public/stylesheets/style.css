@@ -1,0 +1,174 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.container {
+  background: #cee5f7;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #4a4a8a;
+  margin-bottom: 1.5rem;
+}
+
+label
+{
+ font-size: 1 rem; 
+ color: #2f2f5a;
+}
+
+.add-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.add-form input[type="text"] {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.add-form input[type="text"]:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.add-form button {
+  padding: 0.65rem 1.2rem;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-form button:hover { background: #5a6fd6; }
+
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.todo-item {
+  display: flex;
+  align-items: left;
+  gap: 0.5rem;
+  background: #f8f8ff;
+  border: 1px solid #e8e8f0;
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+  transition: background 0.2s;
+}
+
+.todo-item.completed {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  opacity: 0.8;
+}
+
+.empty {
+  text-align: left;
+  color: #aaa;
+  padding: 1rem;
+  font-style: italic;
+}
+
+.inline-form { display: flex; align-items: center; }
+
+.edit-form { flex: 1; gap: 0.4rem; }
+
+.edit-input {
+  flex: 1;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.95rem;
+  background: transparent;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+}
+
+.edit-input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: #fff;
+}
+/*Crosses out completed task line*/
+.edit-input.strikethrough { text-decoration: line-through; color: #999; }
+
+/*Button Stylization*/
+.btn-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 0.2rem;
+  line-height: 1;
+}
+
+.btn-save {
+  padding: 0.3rem 0.7rem;
+  background: #10b981;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.btn-save:hover { background: #059669; }
+
+.btn-delete {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0 0.2rem;
+  transition: transform 0.15s;
+}
+
+.content-row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.add-section {
+  flex: 0 0 220px;   
+}
+
+.tasks-section {
+  flex: 1;           
+}
+
+.add-section h2,
+.tasks-section h2 {
+  font-size: 1rem;
+  color: #4a4a8a;
+  margin-bottom: 0.75rem;
+}
+
+.btn-delete:hover { transform: scale(1.2); }
