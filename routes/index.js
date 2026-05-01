@@ -17,6 +17,38 @@ router.get('/', function(req, res, next){
     res.status(500).send('Error fetching items');
   }
 });
+
+/* GET Menu page. */
+router.get('/menu', (req, res) => {
+  res.render('menu', { pdfUrl: '/menu.pdf' });
+});
+
+/* GET About page. */
+// router.get('/about', function(req, res, next){
+//   res.render('about', { title: 'About' });
+// });
+
+router.get('/about', (req, res) => {
+  res.render('about', { pdfUrl: '/HEADPHONES.pdf' });
+});
+
+
+/* GET Reviews page. */
+router.get('/', function(req, res, next){
+  try {
+    req.db.query('SELECT * FROM todos;', (err, results) => {
+      if (err) {
+        console.error('Error fetching todos:', err);
+        return res.status(500).send('Error fetching todos');
+      }
+      res.render('reviews', { title: 'My Simple TODO', todos: results });
+    });
+  } catch (error) {
+    console.error('Error fetching items:', error);
+    res.status(500).send('Error fetching items');
+  }
+});
+
 //Creates new tasks and makes sure it is not empty
 router.post('/create', function (req, res, next) {
   const { task } = req.body;
