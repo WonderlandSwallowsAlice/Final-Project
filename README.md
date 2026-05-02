@@ -1,0 +1,3 @@
+# CS208 Full Stack Final Project
+
+This is a simple app that takes the user input as a task and let's them submit it by pushing "Create Task" button. After task is created it reflect's in "Your tasks" column where the user can edit task and save the changes, press complete task to make the task as completed or delete the task by pressing on the garbage can sign. To run this program first run ./setup_scripts/install_db.sh command and select for the first question and Y for the rest, for the password enter 12345. Then run sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql command and after this is done, finally run npm istall and npm start command in terminal and open browser. 

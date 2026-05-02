@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Italianno&display=swap')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav
+      .nav-left
+        a(href="/") Home
+        a(href="/menu.pdf" target="_blank") Menu
+      .nav-center
+        .nav-divider-left
+        img(src="/logo.png" alt="Downtown Donuts Logo")
+        .nav-divider-right
+      .nav-right
+        a(href="/about") About Us
+        a(href="/reviews") Reviews
+    block content
