@@ -1,17 +1,18 @@
-/* ===== FONTS ===== */
+/* Imports fonts */
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* ===== RESET ===== */
+/*Reset*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
+/*Body style*/
 body {
   font-family: 'Italianno', cursive;
-  background: linear-gradient(135deg, #ffffff 0%, #95d4c1 100%);
+  background: linear-gradient(135deg, #a59075 20%, #cbb39e 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,7 +20,7 @@ body {
   padding-top: 80px; /* space for fixed nav */
 }
 
-/* ===== NAV ===== */
+/*Pug navigation style*/
 nav {
   position: fixed;
   top: 0;
@@ -51,7 +52,7 @@ nav {
   justify-content: center;
 }
 
-/* Dark green thick dividers on each side of logo */
+/* Header modifications */
 .nav-divider-left,
 .nav-divider-right {
   width: 6px;
@@ -74,10 +75,10 @@ nav a {
 }
 
 nav a:hover {
-  color: #e5e788;
+  color: #f7C64A;
 }
 
-/* ===== CONTAINER ===== */
+/*Container*/
 .container {
   background: #cee5f7;
   border-radius: 8px;
@@ -88,33 +89,68 @@ nav a:hover {
   margin: 2rem 1rem;
 }
 
-/* ===== HEADINGS ===== */
+/*Heading*/
 h1 {
   font-family: 'Italianno', cursive;
   text-align: center;
-  font-size: 1.8rem;
-  color: #4a4a8a;
-  margin-bottom: 1.5rem;
+  font-size: 3 rem;
+  color: #12513b;
+  padding-top: 100 px; 
 }
 
-.add-section h2,
-.tasks-section h2 {
-  font-size: 1rem;
-  color: #4a4a8a;
-  margin-bottom: 0.75rem;
+.add-section h2 {
+  font-size: 4rem;
+  color: #10291D;
+  margin-bottom: 1rem;
+  text-align: center; 
 }
 
-/* ===== LAYOUT ===== */
+h3 {
+  font-family: 'Montserrat';
+  text-align: center;
+  font-size: 3 rem;
+  color: #12513b;
+  padding-top: 100 px; 
+}
+
+/*Layout formatting*/
 .content-row {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
 }
 
-.add-section { flex: 0 0 220px; }
+.add-section {
+  padding-top: 50px; /* pushes content below nav */
+  text-align: center;
+}
+
+.home-center img {
+  height: 800px;
+  width: auto;
+  display: block;
+}
+
+p
+{
+  font-size: 24px;
+
+}
+
+.links a
+{
+  text-decoration: none;
+  color: #072818;
+  font-size: 1.4rem;
+  font-family: 'Montserrat';
+  transition: color 0.2s;
+  text-align: left; 
+}
+
+
 .tasks-section { flex: 1; }
 
-/* ===== FORM ===== */
+/*Label*/
 label { font-size: 1rem; color: #2f2f5a; }
 
 .add-form {
@@ -123,6 +159,7 @@ label { font-size: 1rem; color: #2f2f5a; }
   margin-bottom: 1.5rem;
 }
 
+/*Input from the previous assignment. Needs to be cleaned up*/
 .add-form input[type="text"] {
   flex: 1;
   padding: 0.65rem 1rem;
@@ -150,62 +187,7 @@ label { font-size: 1rem; color: #2f2f5a; }
 
 .add-form button:hover { background: #5a6fd6; }
 
-/* ===== TODO LIST ===== */
-.todo-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-.todo-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: #f8f8ff;
-  border: 1px solid #e8e8f0;
-  border-radius: 10px;
-  padding: 0.6rem 0.8rem;
-  transition: background 0.2s;
-}
-
-.todo-item.completed {
-  background: #f0fdf4;
-  border-color: #bbf7d0;
-  opacity: 0.8;
-}
-
-.empty {
-  text-align: left;
-  color: #aaa;
-  padding: 1rem;
-  font-style: italic;
-}
-
-/* ===== INLINE FORMS ===== */
-.inline-form { display: flex; align-items: center; }
-.edit-form { flex: 1; gap: 0.4rem; }
-
-.edit-input {
-  flex: 1;
-  border: 1px solid transparent;
-  border-radius: 6px;
-  padding: 0.35rem 0.5rem;
-  font-size: 0.95rem;
-  background: transparent;
-  transition: border-color 0.2s, background 0.2s;
-  width: 100%;
-}
-
-.edit-input:focus {
-  outline: none;
-  border-color: #667eea;
-  background: #fff;
-}
-
-.edit-input.strikethrough { text-decoration: line-through; color: #999; }
-
-/* ===== BUTTONS ===== */
+/*Buttons from old assignment*/
 .btn-toggle {
   background: none;
   border: none;
@@ -240,7 +222,7 @@ label { font-size: 1rem; color: #2f2f5a; }
 
 .btn-delete:hover { transform: scale(1.2); }
 
-/* ===== PDF ===== */
+/*PDF for menu*/
 .pdf-wrapper {
   position: fixed;
   top: 80px;
@@ -258,3 +240,122 @@ label { font-size: 1rem; color: #2f2f5a; }
 }
 
 
+
+
+/* ===== REVIEWS ===== */
+.reviews-container {
+  max-width: 800px;
+  margin: 100px auto 2rem;
+  padding: 0 1rem;
+}
+
+.error-banner {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #991b1b;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.review-form {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.65rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Italianno', cursive;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.review-form button {
+  padding: 0.65rem 1.5rem;
+  background: #1a4a2e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.review-form button:hover {
+  background: #667eea;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.review-username {
+  font-weight: bold;
+  color: #1a4a2e;
+  font-size: 1.1rem;
+}
+
+.review-time {
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.review-comment {
+  color: #333;
+  font-size: 1rem;
+}
+
+/* ===== PAGINATION ===== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination a {
+  padding: 0.5rem 1rem;
+  background: #1a4a2e;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.pagination a:hover {
+  background: #667eea;
+}
+
+.pagination span {
+  color: #fff;
+}

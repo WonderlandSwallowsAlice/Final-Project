@@ -1,6 +1,58 @@
 extends layout
 
 block content
-  h1= title
-body 
-      h2 Reviews
+  .reviews-container
+    h1 Reviews
+
+    //- Error message
+    if error
+      .error-banner
+        p= error
+
+    //- Submit form
+    .review-form
+      h2 Leave a Review
+      form(action="/reviews" method="POST")
+        .form-group
+          label(for="username") Your Name (max 50 characters)
+          input(
+            type="text"
+            id="username"
+            name="username"
+            maxlength="50"
+            placeholder="Your name"
+            required
+          )
+        .form-group
+          label(for="comment") Comment (max 500 characters)
+          textarea(
+            id="comment"
+            name="comment"
+            maxlength="500"
+            rows="4"
+            placeholder="Write your review..."
+            required
+          )
+        button(type="submit") Post Review
+
+    //- Reviews list
+    .reviews-list
+      h2 What People Are Saying
+      if reviews.length === 0
+        p.empty No reviews yet. Be the first to leave one!
+      else
+        each review in reviews
+          .review-card
+            .review-header
+              span.review-username= review.username
+              span.review-time= new Date(review.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+            p.review-comment= review.comment
+
+    //- Pagination
+    if totalPages > 1
+      .pagination
+        if currentPage > 1
+          a(href=`/reviews?page=${currentPage - 1}`) ← Previous
+        span Page #{currentPage} of #{totalPages}
+        if currentPage < totalPages
+          a(href=`/reviews?page=${currentPage + 1}`) Next →
