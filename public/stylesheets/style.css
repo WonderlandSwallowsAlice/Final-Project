@@ -90,18 +90,18 @@ nav a:hover {
 }
 
 /*Heading*/
-h1 {
+.add-section h1 {
   font-family: 'Italianno', cursive;
   text-align: center;
-  font-size: 3 rem;
-  color: #12513b;
-  padding-top: 100 px; 
+  font-size: 4 rem;
+  color: #10291D;
+  padding-top: 50 px; 
 }
 
 .add-section h2 {
   font-size: 4rem;
   color: #10291D;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2 rem;
   text-align: center; 
 }
 
@@ -113,11 +113,25 @@ h3 {
   padding-top: 100 px; 
 }
 
+h4 {
+  font-family: 'Montserrat';
+  text-align: center;
+  font-size: 2.5 rem;
+  color: #268d69;
+  padding-top: 100 px; 
+}
+
 /*Layout formatting*/
 .content-row {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
+}
+
+.content-row img {
+  height: 500px;
+  width: auto;
+  display: block;
 }
 
 .add-section {
@@ -131,10 +145,35 @@ h3 {
   display: block;
 }
 
+.home-banner
+{
+  background: #5e544b;
+  border: 2px solid #042f1a;
+  color: #10291D;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.about-banner
+{
+  background: #ababab;
+  border: 2px solid #042f1a;
+  color: #10291D;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
 p
 {
-  font-size: 24px;
+  font-size: 16px;
+  font-family: 'Montserrat';
+   color: #072818;
+}
 
+.links {
+  text-align: left;
 }
 
 .links a
@@ -144,14 +183,26 @@ p
   font-size: 1.4rem;
   font-family: 'Montserrat';
   transition: color 0.2s;
-  text-align: left; 
+}
+
+.links h3 
+{
+  font-family: 'Montserrat';
+  text-align: left;
+  font-size: 3 rem;
+  color: #12513b;
+  padding-top: 100 px; 
 }
 
 
 .tasks-section { flex: 1; }
 
 /*Label*/
-label { font-size: 1rem; color: #2f2f5a; }
+label { 
+  font-size: 0.8rem; 
+  color: #2f2f5a; 
+  font-family: 'Montserrat';
+}
 
 .add-form {
   display: flex;
@@ -279,14 +330,14 @@ label { font-size: 1rem; color: #2f2f5a; }
   border: 2px solid #ddd;
   border-radius: 8px;
   font-size: 1rem;
-  font-family: 'Italianno', cursive;
+  font-family: 'Montserrat';
   transition: border-color 0.2s;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  outline: none;
-  border-color: #667eea;
+  outline: none; 
+  border-color: #072818;
 }
 
 .review-form button {

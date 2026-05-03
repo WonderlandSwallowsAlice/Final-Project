@@ -1,8 +1,10 @@
 extends layout
 
 block content
-  .reviews-container
+  .add-section
     h1 Reviews
+  .reviews-container
+    
 
     //- Error message
     if error
@@ -11,7 +13,7 @@ block content
 
     //- Submit form
     .review-form
-      h2 Leave a Review
+      h3 Leave a Review
       form(action="/reviews" method="POST")
         .form-group
           label(for="username") Your Name (max 50 characters)
@@ -37,9 +39,8 @@ block content
 
     //- Reviews list
     .reviews-list
-      h2 What People Are Saying
       if reviews.length === 0
-        p.empty No reviews yet. Be the first to leave one!
+        p.empty    No reviews yet. Be the first to leave one!
       else
         each review in reviews
           .review-card
