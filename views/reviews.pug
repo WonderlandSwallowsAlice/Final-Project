@@ -1,17 +1,15 @@
 extends layout
 
 block content
-  .add-section
-    h1 Reviews
+  h1 Reviews
   .reviews-container
     
-
-    //- Error message
+    //Error message
     if error
       .error-banner
         p= error
 
-    //- Submit form
+    //Submission form
     .review-form
       h3 Leave a Review
       form(action="/reviews" method="POST")
@@ -37,7 +35,7 @@ block content
           )
         button(type="submit") Post Review
 
-    //- Reviews list
+    //Reviews list
     .reviews-list
       if reviews.length === 0
         p.empty    No reviews yet. Be the first to leave one!
@@ -46,10 +44,10 @@ block content
           .review-card
             .review-header
               span.review-username= review.username
-              span.review-time= new Date(review.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+              span.review-time= new Date(review.created_at).toLocaleDateString('en-US', { timeZone: 'America/Boise', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' })
             p.review-comment= review.comment
 
-    //- Pagination
+    //Pagination
     if totalPages > 1
       .pagination
         if currentPage > 1

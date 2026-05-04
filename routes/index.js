@@ -73,7 +73,7 @@ router.post('/reviews', (req, res) => {
   const comment = escape(req.body.comment?.trim());
   const errors = [];
 
-  // Server-side validation
+  //Length validation
   if (!username) errors.push('Name cannot be empty.');
   if (!comment) errors.push('Comment cannot be empty.');
   if (username.length > 50) errors.push('Name cannot exceed 50 characters.');
@@ -104,8 +104,5 @@ router.post('/reviews', (req, res) => {
     res.redirect('/reviews');
   });
 });
-
-
-
 
   module.exports = router;

@@ -17,10 +17,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 80px; /* space for fixed nav */
+  padding-top: 80px; 
 }
 
-/*Pug navigation style*/
+/*Pug navigation stylization*/
 nav {
   position: fixed;
   top: 0;
@@ -89,35 +89,41 @@ nav a:hover {
   margin: 2rem 1rem;
 }
 
-/*Heading*/
-.add-section h1 {
+/*Headings*/
+h1 {
   font-family: 'Italianno', cursive;
   text-align: center;
-  font-size: 4 rem;
+  font-size: 4rem;
   color: #10291D;
-  padding-top: 50 px; 
+  padding-top: 20px; 
+  padding-bottom: none; 
 }
 
 .add-section h2 {
   font-size: 4rem;
   color: #10291D;
-  margin-bottom: 0.2 rem;
+  margin-bottom: 0.2rem;
   text-align: center; 
 }
 
 h3 {
   font-family: 'Montserrat';
   text-align: center;
-  font-size: 3 rem;
-  color: #12513b;
-  padding-top: 100 px; 
+  color: #042c1e;
 }
 
 h4 {
   font-family: 'Montserrat';
   text-align: center;
-  font-size: 2.5 rem;
-  color: #268d69;
+  color: #52bd98;
+  padding-top: 100 px; 
+}
+
+.hours h3 {
+  font-family: 'Italianno', cursive; 
+  text-align: center;
+  font-size: 2rem;
+  color: #f7C64A;
   padding-top: 100 px; 
 }
 
@@ -147,11 +153,12 @@ h4 {
 
 .home-banner
 {
-  background: #5e544b;
-  border: 2px solid #042f1a;
+  background: #948477;
+  border: 2px solid #50483c;
   color: #10291D;
   padding: 1rem;
   border-radius: 8px;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -189,18 +196,16 @@ p
 {
   font-family: 'Montserrat';
   text-align: left;
-  font-size: 3 rem;
   color: #12513b;
-  padding-top: 100 px; 
+  padding-top: 100px; 
 }
-
 
 .tasks-section { flex: 1; }
 
 /*Label*/
 label { 
   font-size: 0.8rem; 
-  color: #2f2f5a; 
+  color: #2f5a46; 
   font-family: 'Montserrat';
 }
 
@@ -210,70 +215,7 @@ label {
   margin-bottom: 1.5rem;
 }
 
-/*Input from the previous assignment. Needs to be cleaned up*/
-.add-form input[type="text"] {
-  flex: 1;
-  padding: 0.65rem 1rem;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.2s;
-}
-
-.add-form input[type="text"]:focus {
-  outline: none;
-  border-color: #667eea;
-}
-
-.add-form button {
-  padding: 0.65rem 1.2rem;
-  background: #667eea;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.add-form button:hover { background: #5a6fd6; }
-
-/*Buttons from old assignment*/
-.btn-toggle {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  padding: 0 0.2rem;
-  line-height: 1;
-}
-
-.btn-save {
-  padding: 0.3rem 0.7rem;
-  background: #10b981;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: background 0.2s;
-  white-space: nowrap;
-}
-
-.btn-save:hover { background: #059669; }
-
-.btn-delete {
-  background: none;
-  border: none;
-  font-size: 1.1rem;
-  cursor: pointer;
-  padding: 0 0.2rem;
-  transition: transform 0.15s;
-}
-
-.btn-delete:hover { transform: scale(1.2); }
-
-/*PDF for menu*/
+/*PDF for menu starts*/
 .pdf-wrapper {
   position: fixed;
   top: 80px;
@@ -289,14 +231,13 @@ label {
   border: none;
   display: block;
 }
+/*PDF for menu ends*/
 
 
-
-
-/* ===== REVIEWS ===== */
+/* Reviews stylization starts*/
 .reviews-container {
   max-width: 800px;
-  margin: 100px auto 2rem;
+  margin: 10px auto 2rem;
   padding: 0 1rem;
 }
 
@@ -310,11 +251,11 @@ label {
 }
 
 .review-form {
-  background: #fff;
+  background: #ffffff;
   padding: 1.5rem;
   border-radius: 10px;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px black;
 }
 
 .form-group {
@@ -352,7 +293,7 @@ label {
 }
 
 .review-form button:hover {
-  background: #667eea;
+  background: gold;
 }
 
 .review-card {
@@ -360,7 +301,7 @@ label {
   border-radius: 10px;
   padding: 1rem 1.5rem;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px black;
 }
 
 .review-header {
@@ -370,22 +311,27 @@ label {
 }
 
 .review-username {
+  font-family: 'Montserrat'; 
   font-weight: bold;
   color: #1a4a2e;
   font-size: 1.1rem;
 }
 
 .review-time {
+  font-family: 'Montserrat'; 
   color: #aaa;
   font-size: 0.85rem;
 }
 
 .review-comment {
+  font-family: 'Montserrat';
   color: #333;
   font-size: 1rem;
 }
 
-/* ===== PAGINATION ===== */
+/*Reviews stylization ends*/
+
+/*Pagination stylization begins*/
 .pagination {
   display: flex;
   justify-content: center;
@@ -404,9 +350,10 @@ label {
 }
 
 .pagination a:hover {
-  background: #667eea;
+  background: gold;
 }
 
 .pagination span {
   color: #fff;
 }
+/*Pagination stylization ends*/
